@@ -7,6 +7,7 @@ import { SearchTextField } from "#common/components/search/search-textfield.comp
 import { switchRoutes } from "#core/router";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { ENV } from "#core/constants/env.constants";
 
 interface Props {
   characterCollection: CharacterEntityVm[];
@@ -34,6 +35,9 @@ export const CharacterCollectionComponent: React.FunctionComponent<Props> = (
 
   return (
     <div className={classes.root}>
+      <div>
+        <h2>Environment: {ENV.ENVIRONMENT}</h2>
+      </div>
       <div>
         <Button
           variant="contained"
